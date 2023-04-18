@@ -9,9 +9,22 @@ import UIKit
 
 class infoViewController: UIViewController {
 
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    var infoText: String = ""
+    var nameText = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if !nameText.isEmpty{
+            nameLabel.text = nameText
+            infoLabel.text = infoText
+        }
+        
         // Do any additional setup after loading the view.
     }
     
